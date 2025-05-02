@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ucapan Manis untuk Kamu</title>
+    <title>Kasir Warung - Nasi Goreng Ortega</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Ucapan Manis untuk Kamu</h1>
-        <p>Masukkan nama kamu yang spesial:</p>
-        <input type="text" id="nama" placeholder="Nama kamu">
-        <button onclick="tampilkanUcapan()">Tampilkan Ucapan</button>
+        <h1>Kasir Warung - Nasi Goreng Ortega</h1>
+        <h2>Daftar Menu</h2>
+        <div id="menu-list"></div>
 
-        <div id="ucapan" style="display:none;">
-            <p id="pesan"></p>
-            <button onclick="senyum()">Tekan untuk Senyum</button>
-        </div>
+        <h2>Pesanan</h2>
+        <label for="nomorMenu">Pilih Nomor Menu:</label>
+        <input type="number" id="nomorMenu" min="1" max="9">
+        
+        <label for="jumlahPesanan">Jumlah:</label>
+        <input type="number" id="jumlahPesanan" min="1">
+
+        <button onclick="tambahPesanan()">Tambah Pesanan</button>
+
+        <h2>Struk Belanja</h2>
+        <div id="struk"></div>
+
+        <h2>Pembayaran</h2>
+        <label for="uangDibayar">Masukkan Uang:</label>
+        <input type="number" id="uangDibayar">
+        <button onclick="hitungTotal()">Hitung Total</button>
+
+        <h2>Hasil</h2>
+        <p id="hasil"></p>
     </div>
 
     <script src="script.js"></script>
